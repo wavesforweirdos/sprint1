@@ -22,12 +22,12 @@ header {
     grid-area: header;
 }
 
-aside {
-    grid-area: derecha;
-}
-
 article {
     grid-area: contenido;
+}
+
+aside {
+    grid-area: derecha;
 }
 
 footer {
