@@ -3,11 +3,11 @@ body {
     margin: 0 auto;
 }
 
-.container {
-    display: flex;
+main {
+    display: grid;
     flex-direction: column;
     align-items: stretch;
-    gap: 20px;
+    grid-gap: 20px;
 }
 
 .background-black {
@@ -84,7 +84,7 @@ body {
     background-color: #6399bb;
 }
 
-.aside {
+aside {
     background-color: #f94c47;
     display: flex;
     flex-flow: column nowrap;
@@ -94,11 +94,11 @@ body {
     flex-grow: 1;
 }
 
-.aside>div {
+aside>div {
     background-color: #ffe380;
 }
 
-.footer {
+footer>div {
     background-color: #e4a434;
     flex-grow: 1;
 
