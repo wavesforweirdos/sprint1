@@ -125,10 +125,29 @@ footer>div {
 }
 
 
-/* For tablet (max-width: 6000px)*/
-@media only screen and (max-width: 600px) {
-    cuerpo {
+/* For tablet (max-width: 992px) */
+@media screen and (max-width: 992px) {
+    .cuerpo {
         background-color: yellow;
-        flex-flow: column;
+        flex-flow: column nowrap;
+    }
+}
+
+
+/* For mobile (max-width: 600px)*/
+@media screen and (max-width: 600px) {
+
+    .noticia {
+        background-color: #004763;
+    }
+
+    .art {
+        background-color: #558991;
+        flex: 1 1 100%;
+        ¡
+    }
+
+    .art-5 {
+        background-color: #97d4c5;
     }
 }
