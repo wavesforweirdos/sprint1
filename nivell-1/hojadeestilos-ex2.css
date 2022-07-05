@@ -1,0 +1,134 @@
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*------------------Definimos el GRID container---------------------*/
+
+main {
+    display: grid;
+    flex-direction: column;
+    grid-gap: 20px;
+    grid-template-areas: 
+    "header"
+    "contenido"
+    "footer"
+}
+
+/*------------------Nombramos los elementos de este grid---------------------*/
+
+header {
+    grid-area: header;
+}
+
+article {
+    grid-area: contenido;
+}
+
+footer {
+    grid-area: footer;
+}
+
+/*------------------Aplicamos formato a las clases---------------------*/
+/* For desktop (max-width: 1200px)*/
+.background-black {
+    background-color: black;
+    padding: 20px;
+}
+
+.navigation {
+    background-color: #27394e;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.nav {
+    background-color: #ea584b;
+}
+
+.nav-1,
+.nav-3 {
+    flex-grow: 1;
+}
+
+.nav-2 {
+    flex-grow: 3;
+}
+
+.header {
+    background-color: #f0763a;
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+
+.cabecera {
+    background-color: #ffcc5e;
+    flex-grow: 1;
+
+}
+
+.cuerpo {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 20px;
+}
+
+.articulo {
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.noticia {
+    background-color: #44465e;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+
+}
+
+.art {
+    background-color: #1664a4;
+    flex: 1 1 45%;
+}
+
+.art-5 {
+    background-color: #6399bb;
+}
+
+aside {
+    background-color: #f94c47;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+    gap: 10px;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+aside>div {
+    background-color: #ffe380;
+}
+
+footer>div {
+    background-color: #e4a434;
+}
+
+footer2>div {
+    background-color: #e4a434;
+}
+
+
+/* For tablet (max-width: 1200px)*/
+@media only screen and (min-width: 768px){
+    
+}
