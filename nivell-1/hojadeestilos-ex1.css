@@ -14,6 +14,7 @@ main {
     "contenido"
     "footer"
 }
+
 /*------------------Nombramos los elementos de este grid---------------------*/
 
 header {
@@ -28,6 +29,8 @@ footer {
     grid-area: footer;
 }
 
+/*------------------Aplicamos formato a las clases---------------------*/
+/* For desktop (max-width: 1200px)*/
 .background-black {
     background-color: black;
     padding: 20px;
