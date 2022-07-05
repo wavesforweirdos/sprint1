@@ -132,22 +132,3 @@ footer>div {
         flex-flow: column nowrap;
     }
 }
-
-
-/* For mobile (max-width: 600px)*/
-@media screen and (max-width: 600px) {
-
-    .noticia {
-        background-color: #004763;
-    }
-
-    .art {
-        background-color: #558991;
-        flex: 1 1 100%;
-        ¡
-    }
-
-    .art-5 {
-        background-color: #97d4c5;
-    }
-}
