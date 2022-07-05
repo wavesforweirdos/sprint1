@@ -10,8 +10,29 @@ main {
     flex-direction: column;
     align-items: stretch;
     grid-gap: 20px;
+    grid-template-areas: 
+    "header"
+    "contenido"
+    "derecha"
+    "footer";
 }
 /*------------------Nombramos los elementos de este grid---------------------*/
+
+header {
+    grid-area: header;
+}
+
+aside {
+    grid-area: derecha;
+}
+
+article {
+    grid-area: contenido;
+}
+
+footer {
+    grid-area: footer;
+}
 
 .background-black {
     background-color: black;
