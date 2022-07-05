@@ -129,6 +129,6 @@ footer>div {
 @media only screen and (max-width: 600px) {
     cuerpo {
         background-color: yellow;
-        flex-flow: column nowrap;
+        flex-flow: column;
     }
 }
