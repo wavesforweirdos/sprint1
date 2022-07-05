@@ -72,7 +72,7 @@ footer {
 
 }
 
-.cuerpo-entero {
+.cuerpo {
     display: flex;
     flex-flow: row nowrap;
     gap: 20px;
@@ -83,7 +83,7 @@ footer {
     flex-grow: 1;
 }
 
-.cuerpo {
+.noticia {
     background-color: #44465e;
     display: flex;
     flex-flow: row wrap;
