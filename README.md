@@ -1,4 +1,4 @@
-# Sprint-1
+# Sprint 1
 <h3>Maquetació i PHP</h3>
 
 **Objectiu general:**
