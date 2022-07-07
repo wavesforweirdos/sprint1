@@ -33,3 +33,5 @@ echo "<pre>";
 echo ('<b>El nuevo array es: <br></b>');
 print_r ($new_array);
 echo "</pre>";
+
+?>
