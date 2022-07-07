@@ -21,3 +21,5 @@ echo "<pre>";
 echo ('El array creado a partir de "<b>' . $cadena . '</b>" es: <br>');
 var_dump($array_de_cadena);
 echo "</pre>";
+
+?>
