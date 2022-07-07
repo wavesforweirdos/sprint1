@@ -1,0 +1,88 @@
+Variables (locales y globales)
+    $nombre = '' , 12345, false/true;
+
+Constanes (locales y globales)
+    define(name, value)
+
+Determinar tipo de número:
+    int -> enteros
+    float -> decimales
+    bool -> booleanes
+
+
+Funciones simples:
+    echo -> imprime en pantalla (print hace lo mismo pero puede llegar a dar errores)
+       
+        para concatenar elementos solo hace falta la coma
+        ej:
+            $n1 = 2;
+            $n2 = 2;
+            var_dumpt($n1);
+            $suma = $n1 + $n2;
+            echo "la suma de $n1 + $n2 es : ",$suma;  (importante utilizar las comillas dobles para que muestre el valor de la variable)
+
+
+    gettype -> para mostrar el tipo de variable que es
+    var_dumpt($variable) -> muestra el tipo de variable y el valor de ésta
+
+    concatenar:
+        números +=
+        strings .=
+
+    crear array
+        manera rápida
+            $array_numeros = array(1,2,5,8,7,9); 
+        manera lenta
+            $array_numeros[0] = 1;
+            $array_numeros[1] = 2;
+            $array_numeros[2] = 5;
+            $array_numeros[3] = 8;
+            $array_numeros[4] = 7;
+            $array_numeros[5] = 9;
+
+        array asociativos
+            $edad = array(
+                'juan' => 11,
+                'pedro' => 20,
+                'david' => 35
+            );
+
+            si hay objetos repetidos, el valor de éste será el último indicado
+
+            echo $edad['pedro'] imprimiria en pantalla 20
+
+            para imprimir todo el contenido del array:
+            echo "<pre>";
+            var_dumpt($edad);
+            echo "</pre>"
+
+    Funciones con array
+        $numeros[]=100; añade directamente dentro de un array ya declarado
+        $edad['jeremias'] = 100; para añadir dentro de un array asociativo
+
+        array_sum(nombre del array, indice a añadir) para sumar
+        array_splice(nombre del array, indice a eliminar) para eliminar a partir del i indicado
+        count(nombre del array) para contar cuántos elementos hay dentro del array (lenght)
+        arrray_search(valor a buscar, nombre del array) nos devuelve el indice (del primer dato encontrado si estan repetidos)
+        array_merge(nom del array1, nom del array2, nom del array3...) crea un nuevo array a partir de la concatenación de los indicados en ese mismo orden
+        asort(nom array) ordena ascendentemente
+        rsort(nom array) ordena descendentemente 
+        arsort(nom array) ordena descendentemente pero sin recalcular sus indices
+
+    Spaceship es un método de comparación y se escribe <=>
+        5 <=> 7 devuelve -1
+        5 <=> 5.0 devuelve 0
+        7 <=> 5 devuelve 1
+
+    foreach se usa para iterar a través de los valores de la arrays
+
+    $animales = array('loro','perro','gato','leon');
+    foreach($animales as $array_nuevo) {
+        echo $array_nuevo."<br>";
+    } imprimirá todo el contenido del array
+
+    $alumnos = array('juan' => 11,'pedro' => 20,'david' => 35)
+
+    foreach ($alumnos as $array_nuevo => $edad){
+        echo $array_nuevo.' tiene '.$edad.' años.'.'<br>';
+    }
