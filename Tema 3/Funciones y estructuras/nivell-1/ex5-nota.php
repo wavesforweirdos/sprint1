@@ -20,4 +20,6 @@ function saberGrado($nota)
     return $msj;
 }
 
-    echo saberGrado($calificacion);
+echo saberGrado($calificacion);
+
+?>
