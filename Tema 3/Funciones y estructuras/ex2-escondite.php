@@ -2,7 +2,7 @@
 
 function escondite()
 {
-    for ($i = 0; $i <= 10; $i+2) {
+    for ($i = 0; $i <= 10; $i+=2) {
         $msj = $i.'... <br>';
 
         if ($i == 10) {
