@@ -1,6 +1,6 @@
 <?php
 
-$max_num = mt_rand(1, 50); //número aleatorio hasta el 50
+$max_num = mt_rand(0, 50); //número aleatorio hasta el 50
 
 function escondite($num)
 {
