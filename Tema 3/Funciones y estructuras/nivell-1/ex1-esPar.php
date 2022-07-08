@@ -1,5 +1,5 @@
 <?php
-$random = mt_rand(1, 100); //crea un número aleatorio hasta el 100
+$random = mt_rand(0, 100); //crea un número aleatorio hasta el 100
 $msj = 'El número aleatorio es <b>' . $random . '</b> ';
 
 function esPar($num,$msj)
