@@ -3,9 +3,9 @@ $precio_chocolate = 1;
 $precio_chicles = 0.50;
 $precio_caramelos = 1.5;
 
-$cantidad_chocolate = 4;
-$cantidad_chicles = 3;
-$cantidad_caramelos = 23;
+$cantidad_chocolate = mt_rand(0, 10);
+$cantidad_chicles = mt_rand(0, 10);
+$cantidad_caramelos = mt_rand(0, 10);
 
 function subtotalProducto($cantidad, $precio)
 {
