@@ -1,46 +1,40 @@
 <?php
-$numero = (int)mt_rand(2, 200); 
-    //(int) me aseguro la conversión a entero de cualquier número introducido
-$lista_numeros = 0;
-
+$numero = (int)mt_rand(2, 200);
+//(int) me aseguro la conversión a entero de cualquier número introducido
 
 function erastostenes($num)
 {
-for ($i=2; $i <= $num ; $i++) { 
+    $lista_numeros = 'Criba de Erastóstenes para los números primos menores que ' . $num . ':<br>';
 
-    if ($num<0) {
-    # code...
-}}
+    if ($num == 0 || $num == 1) {
+        $lista_numeros = 'El número ' . $num . ' no se clasifica.';
+    } elseif ($num < 0) {
+        $lista_numeros = 'Los números negativos no se clasifican.';
+    } elseif ($num >= 2) {
+        for ($i = 2; $i < $num; $i++) {
+            //bucle para recorrer todos los números del 2 al $num
+            if (esPrimo($i)) $lista_numeros .= $i . ' ';
+            //se añaden a la lista todos aquellos numeros del bucle que sean primos
 
+        }
+    }
+
+    return $lista_numeros;
 }
 
-echo $numero;
+function esPrimo($cifra)
+{
+    $contador = 0;
 
-/*
- function esPrimo() {
-            let numeroIndicado = parseInt(document.getElementById('numero').value);
-            let vPrimo; 
-            let msj ='';
+    for ($i = 2; $i <= $cifra; $i++) {
+        if ($cifra % $i == 0) {
+            //Solo entraran los números enteros que sean divisibles por $i.
 
-            if (numeroIndicado == 0 || numeroIndicado == 1) {
-                msj = 'El número ' + numeroIndicado + ' no se clasifica.';
-            } else if (numeroIndicado < 0) {
-                msj = 'Los números negativos no se clasifican.';
-            } else if (numeroIndicado == 2) {
-                msj = 'El número ' + numeroIndicado + ' es primo.'
-            } else if (numeroIndicado>2){
-                for (let i = 2; i < numeroIndicado; i++) {
-                    console.log('El ' + numeroIndicado + ' % ' + i + ' = ' + numeroIndicado % i)
-                    if (numeroIndicado % i == 0) {
-                        msj = 'El número ' + numeroIndicado + ' es compuesto.'
-                    } else {
-                        msj = 'El número ' + numeroIndicado + ' es primo.';
-                    }
-                }
-            } else {
-                msj = 'Indica un número.'
-            }
-            
-            document.getElementById('parrafo2').innerHTML = msj;
+            ++$contador; //sumamos 1 al contador cada vez que sea divisible por $i
+            if ($contador > 1) return false; //si es divisible más de una vez, no es primo (false)
         }
-        */
+    }
+    return true; //si sólo es divisible una vez, es primo (true)
+}
+
+echo erastostenes($numero);
