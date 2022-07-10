@@ -41,6 +41,16 @@ footer {
     background-color: grey;
 }
 
+.bg-navigation {
+    background-image: url(./recourses/header.jpg);
+    background-attachment: local;
+    background-size: 1200px;    
+}
+
+.bg-navigation>div{
+    background-color: transparent;
+}
+
 /*---------------------------------Menu---------------------------------*/
 .navigation {
     display: flex;
