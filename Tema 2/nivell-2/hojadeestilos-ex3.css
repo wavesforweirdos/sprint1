@@ -1,6 +1,7 @@
 body {
     max-width: 1200px;
     margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /*------------------Definimos el GRID container---------------------*/
@@ -32,13 +33,16 @@ footer {
 /*------------------Aplicamos formato a las clases---------------------*/
 /* For desktop*/
 
-.background-black {
-    background-color: black;
+.background {
     padding: 20px;
 }
 
+.bg-grey {
+    background-color: grey;
+}
+
+/*---------------------------------Menu---------------------------------*/
 .navigation {
-    background-color: #27394e;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -47,29 +51,42 @@ footer {
     margin-bottom: 10px;
 }
 
-.nav {
-    background-color: #ea584b;
+.logo {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.img-logo {
+    /* Asignamos una altura mínima */
+    width: 100%;
+    height: auto;
+    max-width: 70px;
+}
+
+.nav-2 {
+    flex-grow: 3;
 }
 
 .nav-3 {
     flex-grow: 1;
 }
 
-.logo {
-    flex-grow: 1;
-    /* Asignamos una altura mínima */
-    min-height: 100px;
+.nav-2,
+.nav-3 {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+}
 
-    background-image: url('recourses/logo.png');
-    background-size: 100px;
-    background-position: center;
+a {
+    text-decoration: none;
+    color: dimgray;
 }
 
 
-.nav-2 {
-    flex-grow: 3;
-}
 
+/*---------------------------------Header---------------------------------*/
 .header {
     background-color: #f0763a;
     gap: 20px;
