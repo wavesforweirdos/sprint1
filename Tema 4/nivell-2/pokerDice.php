@@ -16,25 +16,31 @@ class PokerDice
 
     public function shapeName($val)
     {
+        $cara_selecionada = $val;
+        
         switch ($val) {
             case 0:
-                echo $this->cara_As;
+                $cara_selecionada = $this->cara_As;
                 break;
             case 1:
-                echo $this->cara_K;
+                $cara_selecionada = $this->cara_K;
                 break;
             case 2:
-                echo $this->cara_Q;
+                $cara_selecionada = $this->cara_Q;
                 break;
             case 3:
-                echo $this->cara_J;
+                $cara_selecionada = $this->cara_J;
                 break;
             case 4:
-                echo  $this->cara_7;
+                $cara_selecionada =  $this->cara_7;
                 break;
             case 5:
-                echo $this->cara_8;
+                $cara_selecionada = $this->cara_8;
                 break;
         }
+
+        return $cara_selecionada;
     }
 }
+
+?>
