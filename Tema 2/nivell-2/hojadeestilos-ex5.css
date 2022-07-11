@@ -1,0 +1,219 @@
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*------------------Definimos el GRID container---------------------------------------------------------------------*/
+
+main {
+    display: grid;
+    flex-direction: column;
+    grid-gap: 20px;
+    grid-template-areas:
+        "header"
+        "contenido"
+        "footer";
+}
+
+/*------------------Nombramos los elementos de este grid----------------------------------------------------------*/
+
+header {
+    grid-area: header;
+}
+
+article {
+    grid-area: contenido;
+}
+
+footer {
+    grid-area: footer;
+}
+
+/*------------------Damos formato a las clases---------------------------------------------------------------------*/
+/* For desktop*/
+
+.background {
+    padding: 20px;
+}
+
+.bg-grey {
+    background-color: lightgray;
+}
+
+.bg-navigation {
+    background-image: url(./recourses/header.jpg);
+    background-color: white;
+
+    height: 390px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*---------------------------------Menu---------------------------------*/
+.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.logo {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.img-logo {
+    width: 100%;
+    height: auto;
+    max-width: 60px;
+}
+
+.nav-2 {
+    flex-grow: 3;
+}
+
+.nav-3 {
+    flex-grow: 1;
+}
+
+.nav-2,
+.nav-3 {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    font-size: 80%;
+    color: dimgray;
+}
+
+a:hover{
+    color: #b46060;
+
+}
+
+/*---------------------------------Header---------------------------------*/
+.header {
+    background-color: rgb(128, 128, 128, 0.2);
+    justify-content: space-between;
+    
+    margin-left: 60px;
+    margin-right: 60px;
+    
+    padding: 5px;
+}
+
+.cabecera {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    color: #db947a;
+    
+}
+
+/*---------------------------------Body---------------------------------*/
+.cuerpo {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 20px;
+}
+
+.articulo {
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.noticia {
+    background-color: #44465e;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+
+}
+
+.art {
+    background-color: #1664a4;
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1 1 45%;
+    padding: 20px;
+}
+
+.art-5 {
+    background-color: #6399bb;
+}
+
+.img-article{
+    width: 30%;
+}
+aside {
+    background-color: #f94c47;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+    gap: 10px;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+aside>div {
+    background-color: #ffe380;
+}
+
+/*---------------------------------Footer---------------------------------*/
+footer>div {
+    background-color: #e4a434;
+}
+
+
+/*------------------Adaptaciones---------------------------------------------------------------------*/
+/* For tablet*/
+@media (min-width: 768px) and (max-width: 1024px) {
+    .cuerpo {
+        background-color: yellow;
+        flex-flow: column nowrap;
+    }
+}
+
+
+/* For mobile*/
+@media (min-width: 320) and (max-width: 767px) {
+    .navigation {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .noticia {
+        background-color: #004763;
+    }
+
+    .art {
+        background-color: #558991;
+        flex: 1 1 100%;
+        ¡
+    }
+
+    .art-5 {
+        background-color: #97d4c5;
+    }
+
+    aside {
+        background-color: #ff784c;
+    }
+
+    aside>div {
+        background-color: #ffab64;
+    }
+}
