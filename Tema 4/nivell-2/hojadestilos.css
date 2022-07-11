@@ -1,13 +1,22 @@
-div {
+.container{
+    display: block;
+    height: 800px;
+}
+
+.dado {
+
+    display: inline-block;
+
+    margin: 10px;
+    padding: 10px;
+
+    height: 40px;
+    width: 40px;
+
     border-radius: 1px;
     border-style: solid;
-    padding: 25px;
-    margin: 10px;
-    height: 10px;
-    width: 10px;
 
     font-weight: 900;
     font-size: 200%;
     text-align: center;
-    align-items: center;
 }
