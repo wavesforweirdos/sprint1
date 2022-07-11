@@ -30,5 +30,7 @@
     $tirada = $dado5->throw();
     $dado5->shapeName($tirada);
 
-    
+    function getTotalThrows(){
+        echo 'El número total de tiradas es'
+    }
     ?>
