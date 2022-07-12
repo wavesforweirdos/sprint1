@@ -3,9 +3,9 @@
     class Shape
     {
         //atributos 
-        protected $ancho;
-        protected $alto;
-        protected $area;
+        protected int $ancho;
+        protected int $alto;
+        protected int $area;
 
         //métodos
         public function initialize($valor1, $valor2)
@@ -13,26 +13,29 @@
             $this->ancho = $valor1;
             $this->alto = $valor2;
         }
+
+        public function mostrarArea()
+        {
+            return $this->area;
+        }
     }
 
     class Triangulo extends Shape
     {
 
-        public function area()
+        public function area(): int
         {
-            parent:$area = $this->ancho * $this->alto / 2;
-            echo 'El área del triángulo es ' . $area . '. <br>';
-            return $area;
+            $this->area = $this->ancho * $this->alto / 2;
+            return $this->area;
         }
     }
     class Rectangulo extends Shape
     {
-        
-        public function area()
+
+        public function area(): int
         {
-            parent:$area = $this->ancho * $this->alto;
-            echo 'El área del rectángulo es ' . $area . '. <br>';
-            return $area;
+            $this->area = $this->ancho * $this->alto;
+            return $this->area;
         }
     }
     ?>
