@@ -5,6 +5,7 @@
         //atributos 
         protected $ancho;
         protected $alto;
+        protected $area;
 
         //métodos
         public function initialize($valor1, $valor2)
@@ -21,15 +22,17 @@
         {
             $area = $this->ancho * $this->alto / 2;
             echo 'El área del triángulo es ' . $area . '. <br>';
+            return $area;
         }
     }
     class Rectangulo extends Shape
     {
-
+        
         public function area()
         {
             $area = $this->ancho * $this->alto;
             echo 'El área del rectángulo es ' . $area . '. <br>';
+            return $area;
         }
     }
     ?>
