@@ -7,10 +7,10 @@ function saberGrado($nota)
         case $nota >= 60:
             $msj = 'El grado del estudiante es de Primera División.';
             break;
-        case (45 <= $nota && $nota <= 59):
+        case (45 <= $nota):
             $msj = 'El grado del estudiante es de Segunda División.';
             break;
-        case (33 <= $nota && $nota <= 44):
+        case (33 <= $nota):
             $msj = 'El grado del estudiante es de Tercera División.';
             break;
         default:
