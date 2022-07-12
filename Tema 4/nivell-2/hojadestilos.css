@@ -1,6 +1,12 @@
 .container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.pokerContainer{
     display: block;
-    height: 800px;
 }
 
 .dado {
@@ -19,4 +25,8 @@
     font-weight: 900;
     font-size: 200%;
     text-align: center;
+}
+
+p{
+    margin: 10px;
 }
