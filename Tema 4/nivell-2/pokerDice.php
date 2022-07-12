@@ -1,46 +1,40 @@
 <?php
 class PokerDice
 {
-    private $cara_As = 'As';
-    private $cara_K = 'K';
-    private $cara_Q = 'Q';
-    private $cara_J = 'J';
-    private $cara_7 = '7';
-    private $cara_8 = '8';
+    private $shapeDice = array("As", "K", "Q", "J", 7, 8);
+    public $selectedShape;
+    public static $counter = 0; //De inicio habremos tirado 0 veces el ocnjunto de dados (+1 cada vez que lancemos)
 
     public function throw()
     {
-        $val = mt_rand(0, 5);
-        return $val;
+        $this->selectedShape = array_rand($this->shapeDice,1);
+        //array_rand selecciona 1 valor/objeto aleatorio del array y retorna el índice de este
+        return $this->selectedShape;
     }
 
-    public function shapeName($val)
+    public function shapeName()
     {
-        $cara_selecionada = $val;
-        
-        switch ($val) {
-            case 0:
-                $cara_selecionada = $this->cara_As;
-                break;
-            case 1:
-                $cara_selecionada = $this->cara_K;
-                break;
-            case 2:
-                $cara_selecionada = $this->cara_Q;
-                break;
-            case 3:
-                $cara_selecionada = $this->cara_J;
-                break;
-            case 4:
-                $cara_selecionada =  $this->cara_7;
-                break;
-            case 5:
-                $cara_selecionada = $this->cara_8;
-                break;
-        }
 
-        return $cara_selecionada;
+        echo '<div class="dado">'. $this->shapeDice[$this->throw()] . '</div>';   
+    }
+
+
+    public static function letsPlay()  
+    
+    //palabra reservada static => Declarar propiedades o métodos de clases como estáticos los hacen accesibles sin la necesidad de instanciar la clase. Un método estático puede ser accedido sin un objeto de clase instanciado (una propiedad no puede).
+    
+    {
+        $numDices = 5;
+
+        for ($i = 0; $i < $numDices; $i++) {
+            $dado = new PokerDice();
+            echo $dado->shapeName();
+        }
+        self::$counter += 1;
+    }
+
+
+    public static function getTotalThrows(){
+        return self::$counter;
     }
 }
-
-?>
