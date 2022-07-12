@@ -12,8 +12,8 @@
     class Employee
     {
         //atributos 
-        private $nombre;
-        private $sueldo;
+        private string $nombre;
+        private int $sueldo;
 
         //métodos
         public function initialize($nombre, $sueldo)
