@@ -20,7 +20,7 @@
 
         public function area()
         {
-            $area = $this->ancho * $this->alto / 2;
+            parent:$area = $this->ancho * $this->alto / 2;
             echo 'El área del triángulo es ' . $area . '. <br>';
             return $area;
         }
@@ -30,7 +30,7 @@
         
         public function area()
         {
-            $area = $this->ancho * $this->alto;
+            parent:$area = $this->ancho * $this->alto;
             echo 'El área del rectángulo es ' . $area . '. <br>';
             return $area;
         }
