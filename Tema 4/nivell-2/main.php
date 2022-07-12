@@ -10,83 +10,46 @@
 </head>
 
 <body>
-    <?php
-    require_once "pokerDice.php";
+    <div class="container">
+        <div class="pokerContainer">
 
-    $tirada_dado1 = '?';
-    $tirada_dado2 = '?';
-    $tirada_dado3 = '?';
-    $tirada_dado4 = '?';
-    $tirada_dado5 = '?';
+            <?php
+            require_once "pokerDice.php";
 
-    echo ('<div class="container">
-        <div class="dado" id="dado1">' . $tirada_dado1 . '</div>
-        <div class="dado" id="dado2">' . $tirada_dado2 . '</div>
-        <div class="dado" id="dado3">' . $tirada_dado3 . '</div>
-        <div class="dado" id="dado4">' . $tirada_dado4 . '</div>
-        <div class="dado" id="dado5">' . $tirada_dado5 . '</div>
-        <p class="tirar">
-            <button id="tirada" onclick="starGame()">Tirar dados</button>
-        </p></div>');
+            function player()
+            {
+                Pokerdice::letsPlay();
+                $throws = PokerDice::getTotalThrows();
 
+                return $throws;
+            }
 
+            function button1()
+            {
+                $throws = player();
 
-    function starGame()
-    {
-        $dado1 = new PokerDice();
-        $tirar = $dado1->throw();
-        $tirada_dado1 = $dado1->shapeName($tirar);
+                echo '</div>';
+                echo '<div>';
+                if ($throws <= 1) {
+                    echo 'Has tirado los dados ' . PokerDice::getTotalThrows() . ' vez.';
+                } else {
+                    echo 'Has tirado los dados ' . PokerDice::getTotalThrows() . ' veces.';
+                }
+                echo '</div>';
+                echo '<br>';
+            }
 
-        echo ('<div class="container">
-        <div class="dado" id="dado1">' . $tirada_dado1 . '</div>
-        <div class="dado" id="dado2">' . $tirada_dado2 . '</div>
-        <div class="dado" id="dado3">' . $tirada_dado3 . '</div>
-        <div class="dado" id="dado4">' . $tirada_dado4 . '</div>
-        <div class="dado" id="dado5">' . $tirada_dado5 . '</div>
-        <p class="tirar">
-            <button id="tirada" onclick="starGame()">Tirar dados</button>
-        </p></div>');
+            if (array_key_exists('button1', $_POST)) {
+                button1();
+            }
+            ?>
 
-    }
+            <form method="post">
+                <input type="submit" name="button1" class="button" value="Jugar" />
+            </form>
 
-
-    /*
-    $dado2 = new PokerDice();
-    $tirar = $dado2->throw();
-    $tirada_dado2 = $tirada = $dado2->shapeName($tirar);
-
-    echo '<br>';
-
-    $dado3 = new PokerDice();
-    $tirar = $dado3->throw();
-    $tirada_dado3 = $dado3->shapeName($tirar);
-
-    echo '<br>';
-
-    $dado4 = new PokerDice();
-    $tirar = $dado4->throw();
-    $tirada_dado4 = $dado4->shapeName($tirar);
-
-    echo '<br>';
-
-    $dado5 = new PokerDice();
-    $tirar = $dado5->throw();
-    $tirada_dado5 = $dado5->shapeName($tirar);
-
-    function getTotalThrows()
-    {
-        echo 'El número total de tiradas es';
-    }
-
-    */
-
-
-
-    ?>
-    
-<script>
-    document.getElementById['dado1'].innertHTML = tirada_dado1;
-</script>
+        </div>
+    </div>
 </body>
 
 </html>
