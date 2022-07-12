@@ -6,8 +6,7 @@
     $triangulo->initialize(2, 4);
     $triangulo->area();
 
-    $triangulo = new Rectangulo();
-    $triangulo->initialize(2, 4);
-    $triangulo->area();
-
+    $rectangulo = new Rectangulo();
+    $rectangulo->initialize(2, 4);
+    $rectangulo->area();
     ?>
