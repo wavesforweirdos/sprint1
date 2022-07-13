@@ -1,0 +1,25 @@
+.formulario {
+    width: 400px;
+    padding: 20px;
+}
+
+.form-container {
+
+    border-radius: 10px;
+    border-style: outset;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+
+    padding: 50px;
+}
+.txt-right{
+    text-align: right;
+}
+
+.obligatorio {
+    font-size: small;
+    color: grey;
+}
