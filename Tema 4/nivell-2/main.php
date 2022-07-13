@@ -16,37 +16,40 @@
             <?php
             require_once "pokerDice.php";
 
-            function player()
+
+            function showTotalThrows()
             {
-                Pokerdice::letsPlay();
-                $throws = PokerDice::getTotalThrows();
+                $throws = 0;
 
-                return $throws;
-            }
-
-            function button1()
-            {
-                $throws = player();
-
-                echo '</div>';
-                echo '<div>';
+                echo '<p>';
                 if ($throws <= 1) {
                     echo 'Has tirado los dados ' . PokerDice::getTotalThrows() . ' vez.';
                 } else {
                     echo 'Has tirado los dados ' . PokerDice::getTotalThrows() . ' veces.';
                 }
-                echo '</div>';
-                echo '<br>';
+                echo '</p>';
             }
 
-            if (array_key_exists('button1', $_POST)) {
-                button1();
-            }
+            Pokerdice::letsPlay();
+            $throws = PokerDice::getTotalThrows();
+            showTotalThrows();
+
+            Pokerdice::letsPlay();
+            $throws = PokerDice::getTotalThrows();
+            showTotalThrows();
+
+            Pokerdice::letsPlay();
+            $throws = PokerDice::getTotalThrows();
+            showTotalThrows();
+            
+            Pokerdice::letsPlay();
+            $throws = PokerDice::getTotalThrows();
+            showTotalThrows();
+
+            Pokerdice::letsPlay();
+            $throws = PokerDice::getTotalThrows();
+            showTotalThrows();
             ?>
-
-            <form method="post">
-                <input type="submit" name="button1" class="button" value="Jugar" />
-            </form>
 
         </div>
     </div>
