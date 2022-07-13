@@ -1,11 +1,11 @@
-.container{
+.container {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
 }
 
-.pokerContainer{
+.pokerContainer {
     display: block;
 }
 
@@ -27,6 +27,8 @@
     text-align: center;
 }
 
-p{
-    margin: 10px;
+p {
+    margin: 20px;
+    text-align: center;
+    align-items: center;
 }
