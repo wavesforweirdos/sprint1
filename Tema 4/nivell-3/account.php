@@ -11,7 +11,7 @@ class Account
         $this->nombre = $nombre;
         $this->apellidos = $apellidos;
         $this->cuenta = $cuenta;
-        $this->saldo = number_format($saldo, 2, ",", ".");
+        $this->saldo = $saldo;
     }
 
 
@@ -35,7 +35,7 @@ class Account
     }
     public function getSaldo()
     {
-        return $this->saldo;
+        return number_format($this->saldo, 2, ",", ".");
     }
 
     //----------------------SETTERS-------------------------
@@ -69,13 +69,17 @@ class Account
     public function deposit($amount)
     {
         $ingreso = $this->saldo + $amount;
-        return $ingreso;
+        self::setSaldo($ingreso);
+        $msj = 'El saldo actual de la cuenta es de <b>' . $ingreso . '€</b>.';
+        return $msj;
     }
     public function withdraw($amount)
     {
+
         if ($this->saldo >= $amount) {
             $retirada = $this->saldo - $amount;
-            $msj = 'El saldo actual de la cuenta es ' . $retirada;
+            self::setSaldo($retirada);
+            $msj = 'El saldo actual de la cuenta es <b>' . $retirada . '€</b>.';
             return $msj;
         } elseif ($this->saldo < $amount) {
             echo '<script type ="text/JavaScript">';
@@ -85,6 +89,22 @@ class Account
             echo '<script type ="text/JavaScript">';
             echo 'alert("¡ERROR! No hay dinero en la cuenta.")';
             echo '</script>';
+        }
+    }
+
+    public function operar($val, $opcion)
+    {
+        if ($val < 0) {
+            echo '<script type ="text/JavaScript">alert("¡Debes introducir un valor positivo!")</script>';
+        } else {
+            switch ($opcion) {
+                case 'ingresar':
+                    return self::deposit($val);
+                    break;
+                case 'retirar':
+                    return self::withdraw($val);
+                    break;
+            }
         }
     }
 }
