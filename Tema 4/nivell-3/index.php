@@ -18,8 +18,8 @@
     echo '</pre></p>';
     ?>
 
-    <div>
-        <form method="get">
+<div>
+    <form method="get">
             <input type="number" name="amount" step="any" placeholder="€" required>
             <select name="opcion">
                 <option value="ingresar">Ingresar</option>
@@ -28,15 +28,18 @@
             <button>Operar</button>
         </form>
     </div>
-
+    
     <?php
     echo '<br>';
-
+    
     if (!(empty($_GET))) {
         $amount = $_GET["amount"];
         $operacion = $_GET["opcion"];
-
+        
         echo $cliente->operar($amount, $operacion);
+        echo '<br>Cliente actualizado <p><pre>';
+        var_dump($cliente);
+        echo '</pre>';
     }
     ?>
 
