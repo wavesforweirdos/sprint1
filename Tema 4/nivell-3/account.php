@@ -60,7 +60,7 @@ class Account
     public function __toString()
     {
         $msj = '<b>' . self::getNombreCompleto() . '</b>, la cuenta <b>' . self::getCuenta();
-        $msj .= 'tiene un saldo actual de <b>' . self::getSaldo() . '€</b>.<br>';
+        $msj .= '</b> tiene un saldo actual de <b>' . self::getSaldo() . '€</b>.<br>';
 
         return $msj;
     }
@@ -70,8 +70,7 @@ class Account
     {
         $ingreso = $this->saldo + $amount;
         self::setSaldo($ingreso);
-        $msj = 'El saldo actual de la cuenta es de <b>' . $ingreso . '€</b>.';
-        return $msj;
+        return self::__toString();
     }
     public function withdraw($amount)
     {
@@ -79,8 +78,7 @@ class Account
         if ($this->saldo >= $amount) {
             $retirada = $this->saldo - $amount;
             self::setSaldo($retirada);
-            $msj = 'El saldo actual de la cuenta es <b>' . $retirada . '€</b>.';
-            return $msj;
+            return self::__toString();
         } elseif ($this->saldo < $amount) {
             echo '<script type ="text/JavaScript">';
             echo 'alert("No hay saldo suficiente para tal cantidad.")';
@@ -95,7 +93,7 @@ class Account
     public function operar($val, $opcion)
     {
         if ($val < 0) {
-            echo '<script type ="text/JavaScript">alert("¡Debes introducir un valor positivo!")</script>';
+            echo '<script type ="text/JavaScript">alert("Introduce un valor positivo")</script>';
         } else {
             switch ($opcion) {
                 case 'ingresar':
