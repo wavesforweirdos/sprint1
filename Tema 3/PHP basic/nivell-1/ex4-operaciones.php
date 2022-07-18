@@ -53,7 +53,7 @@ echo ('<hr>La suma de <b>' . $X . '</b> + <b>' . $Y .  '</b> + <b>' . $M . '</b>
 
 //-------------------------PRODUCTO DE TODAS LAS VARIABLES-------------------------
 
-$producto_variables = $X + $Y + $M + $N;
+$producto_variables = $X * $Y * $M * $N;
 
 echo ('<hr>El producto de <b>' . $X . '</b> x <b>' . $Y .  '</b> x <b>' . $M . '</b> x <b>' . $N . '</b> es <b>' . $producto_variables . ' </b>.');
 
