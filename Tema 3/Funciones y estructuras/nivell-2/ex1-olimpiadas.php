@@ -1,8 +1,8 @@
 <?php
 
 $periodo = 4;
-$año_inicial = 1960;
-$año_final = 2016;
+$year_inicial = 1960;
+$year_final = 2016;
 
 function list_olimpiadas($inicio, $fin, $intervalo)
 {
@@ -13,7 +13,7 @@ function list_olimpiadas($inicio, $fin, $intervalo)
     return $listado;
 }
 
-$lista = list_olimpiadas($año_inicial, $año_final, $periodo);
+$lista = list_olimpiadas($year_inicial, $year_final, $periodo);
 echo $lista;
 
 ?>
