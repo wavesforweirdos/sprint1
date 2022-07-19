@@ -4,10 +4,11 @@
 function escondite()
 {
     $msj = 'Vamos a jugar al escondite... <br>';
+    $contar_hasta = 10;
 
-    for ($i = 0; $i <= 10; $i += 2) {
+    for ($i = 0; $i <= $contar_hasta; $i += 2) {
 
-        if ($i < 10) {
+        if ($i < $contar_hasta) {
             $msj .= $i . '... ';
         } else {
             $msj .= $i . '... YA!';
