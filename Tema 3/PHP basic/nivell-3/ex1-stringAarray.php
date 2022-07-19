@@ -2,7 +2,7 @@
 
 $cadena = 'Hello world';
 
-function convertToArray($string)
+function array_sin_espacios($string)
 {
 
     //--------------ELIMINAMOS ESPACIOS----------------------
@@ -15,7 +15,7 @@ function convertToArray($string)
     return $array;
 }
 
-$array_de_cadena = convertToArray($cadena);
+$array_de_cadena = array_sin_espacios($cadena);
 
 echo "<pre>";
 echo ('El array creado a partir de "<b>' . $cadena . '</b>" es: <br>');
