@@ -14,7 +14,9 @@
             $this->alto = $valor2;
         }
 
-        abstract public function mostrarArea()
+        abstract public function area();
+
+        public function mostrarArea()
         {
             return $this->area;
         }
