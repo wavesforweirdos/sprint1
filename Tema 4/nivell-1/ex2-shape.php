@@ -1,6 +1,6 @@
     <?php
 
-    class Shape
+    abstract class Shape
     {
         //atributos 
         protected int $ancho;
@@ -14,7 +14,7 @@
             $this->alto = $valor2;
         }
 
-        public function mostrarArea()
+        abstract public function mostrarArea()
         {
             return $this->area;
         }
