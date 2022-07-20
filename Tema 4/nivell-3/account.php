@@ -35,7 +35,7 @@ class Account
     }
     public function getSaldo()
     {
-        return number_format($this->saldo, 2, ",", ".");
+        return $this->saldo;
     }
 
     //----------------------SETTERS-------------------------
@@ -60,7 +60,7 @@ class Account
     public function __toString()
     {
         $msj = '<b>' . self::getNombreCompleto() . '</b>, la cuenta <b>' . self::getCuenta();
-        $msj .= '</b> tiene un saldo actual de <b>' . self::getSaldo() . '€</b>.<br>';
+        $msj .= '</b> tiene un saldo actual de <b>' . number_format(self::getSaldo(), 2, ",", ".") . '€</b>.<br>';
 
         return $msj;
     }
@@ -70,15 +70,15 @@ class Account
     {
         $ingreso = $this->saldo + $amount;
         self::setSaldo($ingreso);
-        return self::__toString();
     }
+
     public function withdraw($amount)
     {
 
         if ($this->saldo >= $amount) {
             $retirada = $this->saldo - $amount;
             self::setSaldo($retirada);
-            return self::__toString();
+
         } elseif ($this->saldo < $amount) {
             echo '<script type ="text/JavaScript">';
             echo 'alert("No hay saldo suficiente para tal cantidad.")';
@@ -92,17 +92,14 @@ class Account
 
     public function operar($val, $opcion)
     {
-        if ($val < 0) {
-            echo '<script type ="text/JavaScript">alert("Introduce un valor positivo")</script>';
-        } else {
-            switch ($opcion) {
-                case 'ingresar':
-                    return self::deposit($val);
-                    break;
-                case 'retirar':
-                    return self::withdraw($val);
-                    break;
-            }
+        switch ($opcion) {
+            case 'ingresar':
+                self::deposit($val);
+                break;
+            case 'retirar':
+                self::withdraw($val);
+            
+                break;
         }
     }
 }
