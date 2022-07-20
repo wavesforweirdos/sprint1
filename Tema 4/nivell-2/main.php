@@ -19,14 +19,15 @@
 
             function showTotalThrows()
             {
-                $throws = 0;
+                $throws = PokerDice::getThrows();
 
                 echo '<p>';
                 if ($throws <= 1) {
-                    echo 'Has tirado los dados ' . PokerDice::getTotalThrows() . ' vez.';
+                    echo 'Has hecho ' . PokerDice::getThrows() . ' tirada.';
                 } else {
-                    echo 'Has tirado los dados ' . PokerDice::getTotalThrows() . ' veces.';
+                    echo 'Has hecho ' . PokerDice::getThrows() . ' tiradas.';
                 }
+                echo '<br>El total de dados tirados es de ' . PokerDice::getTotalThrows() . '.';
                 echo '</p>';
             }
 
