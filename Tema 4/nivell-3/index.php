@@ -16,12 +16,13 @@
 
     session_start();
     $cliente =  new Account('Marta', 'Cruz Quimasó', 'ABC', 1900);
-    if ((empty($_GET))) {
-        $contador = 1; //valor inicial
-        echo '<h3>Cliente registrado (Registro nº1)</h3><p><pre>';
-        var_dump($cliente);
-        echo '</pre></p>';
-    } else { //si se ha enviado el formulario
+
+    $contador = 1; //valor inicial
+    echo '<h3>Cliente registrado (Registro nº1)</h3><p><pre>';
+    var_dump($cliente);
+    echo '</pre></p>';
+    
+    if (!(empty($_GET))) { //si se ha enviado el formulario
         $contador = $_GET["count"] + 1; //augmento en 1 el contador para los registros
         $cliente = $_SESSION['cliente']; //declaro mi clase de la sesion
     }
