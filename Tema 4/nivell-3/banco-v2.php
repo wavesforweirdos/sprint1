@@ -24,11 +24,11 @@
 
     if (!(empty($_GET))) { //si se ha enviado el formulario
         $contador = $_GET["count"] + 1; //augmento en 1 el contador para los registros
+        if ($contador > 2){
+            $cliente = $_SESSION['cliente']; //declaro mi clase de la sesion anterior cuando se ha enviado el formulario más de una vez
+        }
     }
 
-    if (!(empty($_GET)) && $contador > 2) { //si se ha enviado el formulario
-        $cliente = $_SESSION['cliente']; //declaro mi clase de la sesion anterior
-    }
     ?>
 
     <div>
