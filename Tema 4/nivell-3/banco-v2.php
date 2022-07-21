@@ -15,16 +15,19 @@
     require_once "account.php";
 
     session_start();
-    $cliente =  new Account('Marta', 'Cruz Quimasó', 'ABC', 1900);
 
+    $cliente =  new Account('Marta', 'Cruz Quimasó', 'ABC', 1900);
     $contador = 1; //valor inicial
     echo '<h3>Cliente registrado (Registro nº1)</h3><p><pre>';
     var_dump($cliente);
     echo '</pre></p>';
-    
+
     if (!(empty($_GET))) { //si se ha enviado el formulario
         $contador = $_GET["count"] + 1; //augmento en 1 el contador para los registros
-        $cliente = $_SESSION['cliente']; //declaro mi clase de la sesion
+    }
+
+    if (!(empty($_GET)) && $contador > 2) { //si se ha enviado el formulario
+        $cliente = $_SESSION['cliente']; //declaro mi clase de la sesion anterior
     }
     ?>
 
