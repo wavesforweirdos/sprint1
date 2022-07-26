@@ -20,6 +20,7 @@
             function showTotalThrows()
             {
                 $throws = PokerDice::getThrows();
+                $throws = PokerDice::getTotalThrows();
 
                 echo '<p>';
                 if ($throws <= 1) {
@@ -32,23 +33,18 @@
             }
 
             Pokerdice::letsPlay();
-            $throws = PokerDice::getTotalThrows();
             showTotalThrows();
 
             Pokerdice::letsPlay();
-            $throws = PokerDice::getTotalThrows();
             showTotalThrows();
 
             Pokerdice::letsPlay();
-            $throws = PokerDice::getTotalThrows();
             showTotalThrows();
             
             Pokerdice::letsPlay();
-            $throws = PokerDice::getTotalThrows();
             showTotalThrows();
 
             Pokerdice::letsPlay();
-            $throws = PokerDice::getTotalThrows();
             showTotalThrows();
             ?>
 
