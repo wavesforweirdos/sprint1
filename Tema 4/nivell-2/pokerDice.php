@@ -3,7 +3,7 @@
 //palabra reservada static => Declarar propiedades o métodos de clases como estáticos los hacen accesibles sin la necesidad de instanciar la clase. 
 //Un método estático puede ser accedido sin un objeto de clase instanciado (una propiedad no puede).
 
-class Game{
+abstract class Game{
 
     public static $counterSet = 0; //De inicio habremos tirado 0 veces el conjunto de dados (+1 cada vez que lancemos)
     public static $counterDice = 0; //De inicio habremos tirado 0 veces el dado
